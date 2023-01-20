@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>week 2 assesment</title>
+</head>
+<body>
+    <h1>Week2 assesment</h1>
+
+<p>1 Write a JavaScript function that receives five numbers as input and finds the largest of five numbers.
+Print the results to the console. 
+<br>
+<br>
+function findLargestNumber(a, b, c, d, e) { <br>
+    let largestNumber = a<br>
+    if (b > largestNumber) {<br>
+        largestNumber = b<br>
+    };<br>
+    if (c > largestNumber) {<br>
+        largestNumber = c<br>
+    };<br>
+    if (d > largestNumber) {<br>
+        largestNumber = d<br>
+    };<br>
+    if (e > largestNumber) {<br>
+        largestNumber = e<br>
+    };<br>
+
+    return largestNumber;<br>
+
+}<br>
+
+</p>
+<hr>
+
+<p>2.Write a JavaScript function which iterates the integers from 1 to 100 and prints them out. 
+ But for multiples of three print "Fizz" instead of the number and for the multiples of five print "Buzz".
+ For multiple numbers of three and five, print "FizzBuzz". 
+<br><br>
+function fizzBuzz() {<br>
+    for (let i =1 ; i <= 100 ; i++){<br>
+        if(i %3 ===0 & i %5 ===0){<br>
+            console.log("FizzBuzz");<br>
+        }<br>
+        else if(i %3 ===0){
+            console.log("Fizz");<br>
+        }<br>
+        else if(i %5 ===0){<br>
+            console.log("Buzz");<br>
+        }<br>
+         
+        else{<br>
+            console.log(i);<br>
+        }<br>
+    }<br>
+}<br>
+</p>
+<br>
+<hr>
+    <p>
+     3. What will be the result of the following code, explain.<br> 
+
+        let str = "1"; <br>
+        
+        str = + !str; <br>
+        
+        console.log(typeof str); </p>
+
+
+        <h2>result : number</h2>
+
+        <p>the + operator converts the string to a number, 
+            the ! operator converts the number to a boolean, 
+            and the + operator converts the boolean to a number.</p>
+
+    <script src="assesment.js"></script>
+</body>
+
+
+</html>

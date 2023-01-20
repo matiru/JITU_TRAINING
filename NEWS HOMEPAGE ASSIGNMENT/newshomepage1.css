@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
+
+body {
+  font-family: "Inter", sans-serif;
+height: 100vh;
+width: 100vw;
+justify-content: center;
+align-items: flex-start;
+font-family: "Inter", sans-serif;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem;
+  width: 70%;
+  margin: 0 auto;
+}
+.navigation1{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+}
+.navigation1>span>a {
+  text-decoration: none;
+  color: hsl(240, 100%, 5%);
+  font-weight: 300;
+  font-size: 1.25rem;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.menu-button{
+  display: none;
+}
+.container {
+  display: grid;
+  align-items:center;
+  justify-content: center;
+  gap: 20px;
+  grid-template-areas:"item1 item1 item2" "item3 item4 item2" "item5 item6 item7"; 
+  
+}
+.item{
+  display: flex;
+  flex-direction: column;
+  height: 220px;
+  width: 340px;
+
+
+}
+.item1{
+  grid-area: item1;
+  width: 700px;
+  height: 270px;
+  background-image: url("RESOURCES/image-web-3-mobile.jpg");
+  
+}
+.item2{
+  height:460px;
+  grid-area: item2;
+ 
+  background-color: #00011A;
+}
+.item2>h1{
+  color:#BB864E;
+  margin-left: 20px;
+}
+.item2>article>h3{
+  color:#E8E9F1;
+  margin-left: 20px;
+  font-weight: 700;
+}
+.item2>article>p{
+  color:#55566C;
+  margin-left: 20px;
+  font-weight: 400;
+  font-size: small;
+
+}
+hr{
+  margin-left: 20px;
+  margin-right: 20px;
+  color:#55566C;
+}
+.item3{
+  grid-area: item3;
+
+  display: flex;
+  height: 170px;
+
+}
+.item3>article>h1{
+  color:#06041D;
+  font-size: 40px;
+  margin-top: -1px;
+}
+.item4{
+  grid-area: item4;
+  height: 170px;
+ 
+}
+.item4>article>p{
+  color:#55566C;
+  font-size: 15px;
+
+
+}
+.item4>article>button{
+  font-size: 15px;
+  background-color: hsl(5, 85%, 63%);
+  margin-top: 20px;
+  color: #fff;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  transition: all 0.3s ease-in-out
+}
+.item5{
+  grid-area: item5;
+ 
+  display: flex;
+  flex-direction: row;
+}
+.item6{
+  grid-area: item6;
+
+  display: flex;
+  flex-direction: row;
+
+}
+.item7{
+  grid-area: item7;
+ 
+  display: flex;
+  flex-direction: row;
+}
+span{  color: hsl(236, 13%, 42%);
+  font-weight: bold;
+  font-size: 2rem;
+  opacity: 75%;}
+.card>h4{
+  font-size: 1.25rem;
+  color: hsl(240, 100%, 5%);
+  margin: 1rem 0;
+}
+@media (max-width: 375px){
+.header{
+  display: flex;
+  justify-content: space-between;
+  padding: 1.25rem;
+  width: 100%;
+  margin: 0 auto;
+}
+  .container{
+    grid-template-areas:"item1" "item3" "item4" "item2" "item5" "item6" "item7";
+
+  }
+  .item1{
+    height: 220px;
+  width: 340px
+    
+  }
+  .item3{
+ 
+    height: 220px;
+  width: 340px}
+  .item4{
+    width: 340px;
+    height: 220px;}
+    .menu-button{
+      display: inline;
+    }
+    .menu-items{
+      display: none;
+    }
+    .navigation1{
+      display: none;
+    }
+}
+.branch_banner_text>h1{
+  color:white;
+  font-size: 20px;
+  font-weight: 200;
+
+}
