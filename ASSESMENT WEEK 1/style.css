@@ -1,0 +1,208 @@
+@import url("https://fonts.google.com/specimen/Rubik");
+
+*{
+      color: white;
+      margin: 0;
+      padding: 0;
+}
+
+body{
+      background-color: hsl(226, 43%, 10%);
+      font-family: Rubik, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+}
+
+.container{
+      display: flex;
+      gap: 15px;
+      
+      padding: 20px;
+      align-items: center;
+      justify-content: center;
+      width: 1040px;
+}
+
+.profile{
+      background-color: hsl(235, 46%, 20%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      border-radius: 5px;
+      flex-grow: 20%;
+}
+
+.profile img{
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 2px solid white;
+      margin-bottom: 15px;
+      flex-grow: 1;
+}
+.tabs{
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+}
+
+.profile a{
+      text-decoration: none;
+      margin: 10px;
+      font-size: 10px;
+      color: hsl(235, 45%, 61%);
+}
+
+.profile a:hover{
+      color: white;
+}
+
+.profile-top{
+      border-radius: 5px;
+      background-color: hsl(246, 80%, 60%);padding: 10px;
+}
+
+.profile-top small{
+      font-size: 10px;
+      font-size: 300;
+      display: block;
+}
+
+.profile-top h2{
+      font-size: 18px;
+      font-size: 500;
+      margin: 0;
+      margin-bottom: 15px;
+}
+
+.cards-container{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      flex-grow: 2;
+}
+
+.card-container{
+      
+      border-radius: 5px;
+      position: relative;
+      z-index: -2;
+      width: 100%;
+}
+
+.work{
+      background-color: hsl(15, 100%, 70%);
+}
+
+.play{
+      background-color: hsl(195, 74%, 62%);
+}
+.study{
+      background-color: hsl(348, 100%, 68%);
+}
+
+.exercise{
+      background-color: hsl(145, 58%, 55%);
+}
+
+.social{
+      background-color: hsl(264, 64%, 52%);
+}
+
+.self{
+      background-color:  hsl(43, 84%, 65%);
+}
+
+.card{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      background-color:hsl(235, 46%, 20%);
+      border-radius: 5px;
+      padding: 10px;
+      margin-top: 25px;
+      gap: 15px;
+}
+
+.card-container>img{
+      width: 30px;
+      position: absolute;
+      right: 10px;
+      top: 0;
+      z-index: -1;
+}
+
+.menu{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      
+}
+.menu h3{
+      font-size: 10px;
+      font-weight: 500;
+}
+
+
+.details{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 5px;
+}
+
+.details h2{
+      font-size: 18px;
+      font-weight: 400;
+
+}.details p{
+      font-size: 10px;
+      color: hsl(235, 45%, 61%);
+}
+
+
+.attribution{
+      position: absolute;
+      bottom: 20px;
+
+}
+
+@media (max-width: 600px) {
+      .container{
+            flex-direction: column;
+      }
+      .profile{
+            width: 100%}
+
+
+      .profile-top img{
+            float: left;
+            margin-right: 15px;
+      }
+
+      .tabs{
+            align-self: center;
+            flex-direction: row;
+            width: 100%;
+            justify-content: space-evenly;
+      }
+
+      .cards-container{
+            width: 100%;
+            grid-template-columns: repeat(2, 1fr);
+            margin-bottom: 20px;
+      }
+      
+}
+
+@media (max-width:375px) {
+      .cards-container{
+            grid-template-columns: 1fr;
+      }
+}
