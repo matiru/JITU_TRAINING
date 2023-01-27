@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array and String Methods</title>
+</head>
+<body>
+    <h1>Array and String Methods</h1>
+    <p>1.1// Write a JavaScript program to remove duplicate items from an array ignoring case sensitivity<br>
+
+      let fruits = ["apple", "banana", "orange", "apple", "pineapple","Orange"];<br>
+      
+      function removeDuplicates(arr) {<br>
+      
+          let  fruits2 = arr.map(function(item) {<br>
+              return item.toLowerCase();<br>
+          });<br>
+      
+          let uniqueFruits = [...new Set(fruits2)];<br>
+          return uniqueFruits;<br>
+      }<br>
+      console.log(removeDuplicates(fruits));<br>
+      
+      
+      </p>
+      <hr>
+
+<p>2.// Write a JavaScript function to find an array contains a specific element.<br>
+  let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];<br>
+  function contains(array, element) {<br>
+    return arr.includes(element);<br>
+  }<br>
+  console.log(contains(array, 5));<br>
+</p>
+  <hr>
+ <P>
+  
+3// Compact. Write a method that clears array from all unnecessary elements, like false, undefined, empty strings, zero, null<br>
+//  Example: [3, 8, 23, "hello", " ", false, "45"]result: [3, 8, 23, "hello", "45"<br>
+
+let arr = [3, 8, 23, "hello", " ", false, "45"];<br>
+
+function clearArray1(arr){<br>
+    return arr.filter(function(item){<br>
+        return item !== false && item !== undefined && item !== " " && item !== 0 && item !== null;  <br>
+        });<br>
+}<br>
+ console.log(clearArray1(arr));<br>
+ </P>
+ <hr>
+  <p>
+    
+4.// Write a function to reverse the words a string.example: "Hello world"result: "world hello"<br>
+
+let str = "Hello world";<br>
+let reverse = str.split(" ").reverse().join(" "); <br>
+console.log(reverse); <br>
+<hr>
+  </p>
+
+
+
+
+    <script src = "array and strings.js"></script>
+
+</body>
+</html>

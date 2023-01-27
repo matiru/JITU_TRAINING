@@ -1,0 +1,177 @@
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: #4cc39f;
+    color: #333;
+    padding: 0;
+}
+.container{
+    background-color: #03001C;
+    height:fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    border: solid 1px#B6EADA;
+    color: #333;
+    padding: auto;
+  }
+.addTodo{ 
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: #333;
+    gap: 10px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+.todoInput{
+    width: 350px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #333;
+    background-color: #B6EADA;
+}
+.timeInput{
+    background-color: #B6EADA;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #333;
+}
+.submitBtn{
+    width: 100px;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #333;
+    background-color:#5B8FB9;
+   cursor: pointer;
+}
+.filter{
+    display: flex;
+    margin-bottom: 50px;
+    width: 520px;
+    justify-content: space-between;
+  
+}
+.select{
+    background-color: #B6EADA;
+    width: 100px;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #333;
+    width: fit-content;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+hr{
+    color: #4cc39f;
+    width: 60%;  
+}
+.todoList{
+    background-color: #03001C;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    width: fit-content;
+    color: #333;
+    gap: 10px;
+}
+.todoContainer{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    width: 600px;
+    color: #333;
+    gap: 10px;
+}
+.todo{
+    margin-bottom: 10px;
+    display: flex;
+    background-color: #4cc39f;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #333;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.todoBtns{
+    display: flex;
+    gap: 10px;
+
+}
+.completeBtn{
+    background-color: #B6EADA;
+    width: 100px;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+}
+.deleteBtn{
+    background-color: #B6EADA;
+    width: 100px;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+}
+
+h3{
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    color: #4cc39f;
+  
+}
+.add_todo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.todos{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
