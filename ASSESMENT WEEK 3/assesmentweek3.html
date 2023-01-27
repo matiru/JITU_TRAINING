@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Assesment wwek 3</title>
+     
+</head>
+<body>
+    <h2>WEEK 3 ASSESMENT</h2>
+    <P>
+        1. Will the below two functions output the same results? Explain your answer.<br>
+
+function foo1() { <br>
+
+return {bar: "hello"};<br>
+
+}<br>
+
+function foo2() {<br>
+
+Return<br>
+
+{bar: "hello"};<br>
+
+}<br>
+
+answer :<br>
+<b> No, the first function will return the object {bar: "hello"}<br>
+     and the second function will return undefined (if executed as return and not 'Return').<br>
+this is because the first function has a return statement and the second function does not.<br>
+the return value should be the value of the expression after the return keyword  and on the same line<br>
+also the second function cannot execute if return is written as "Return" because return is a key word in javascript<br>
+</b>
+ </P>
+ <hr>
+
+
+<p>
+    //2. Write a simple function that returns a Boolean indicating whether a string is a <br>
+//palindrome (a word, phrase, number, or other sequence of symbols or elements, <br>
+//whose meaning may be interpreted the same way in either forward or reverse direction). Hint: ignore spaces<br>
+// Example “alula” forwards and backwards is the same.<br>
+// “race car” forwards and backwards is the same.<br>
+<br>
+function isPalindrome(string){<br>
+    let newString = string.replace(/\s/g, '').toLowerCase();<br>
+    let reverseString = newString.split("").reverse().join("");<br>
+    if (newString === reverseString){<br>
+        return true;<br>
+    }<br>
+    else{<br>
+        return false;<br>
+    }<br>
+}<br>
+ console.log(isPalindrome("alula"));<br>
+ console.log(isPalindrome("race car"));<br>
+console.log(isPalindrome("hello"));<br>
+console.log(isPalindrome("Race car"));<br>
+
+</p>
+<hr>
+
+<p>
+
+    // 3. Using a Prompt allow user to enter numbers separated by commas then print the sum of the numbers.<br>
+
+    let numbers = prompt("Enter numbers separated by commas");<br>
+    let sum = 0;<br>
+    let array = numbers.split(",");<br>
+    for (let i = 0; i < array.length; i++){<br>
+        sum += Number(array[i]);<br>
+    }<br>
+    console.log(sum);<br>
+    alert("The sum of the numbers is " + sum);<br>
+</p>
+ <hr>
+
+ <P>
+    
+// 4. Create a function that, given a DOM Element on the page, will visit the element itself <br>
+// and all of its descendents (not just its immediate children). For each element visited,<br>
+//  the function should pass that element to a provided callback function.<br>
+
+// The arguments to the function should be:<br>
+
+// a DOM element<br>
+// a callback function (that takes a DOM element as its argument)<br>
+<br>
+
+let p_element =document.querySelector('#parent');<br>
+let p_callback = function(element){<br>
+    console.log(element);<br>
+}<br>
+
+
+function visitElement(element, callback){<br>
+    callback(element);<br>
+    let children = element.children;<br>
+    for (let i = 0; i < children.length; i++){<br>
+        visitElement(children[i], callback);<br>
+    }<br>
+}<br>
+visitElement(p_element, p_callback);<br>
+<hr>
+
+
+ <div id="parent"> 
+    <div id="first_child"></div>
+    <div id= "second_child">
+        <h1 id = "first_grandchild"></h1>
+        <diV id="second_grandchild">
+        <span id = "great_grandchild"></span>
+        </div>
+    </div>
+    <article id=" third_child">
+
+    </article>
+
+ </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="assesmentweek3.js"></script>
+</body>
+</html>
