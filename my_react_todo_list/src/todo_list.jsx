@@ -1,6 +1,7 @@
 import './todo_list.css';
 import React, { useState } from 'react';
 
+
 function TodoList() {
   const [todos, setTodos] = useState([  
                  {id : 1, title : "go to church",date_due:"18/02/2023", completed : false},
@@ -24,7 +25,7 @@ function TodoList() {
 
       <ul>
         {todos.map((todo) => (
-          <li key={todo.id}><p>{todo.title}</p> <small><h4>{todo.date_due}</h4></small><button>delete</button></li>
+          <li key={todo.id}><p>{todo.title}</p> <small><h4>{todo.date_due}</h4></small></li>
         ))}
       </ul>
 

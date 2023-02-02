@@ -13,8 +13,10 @@ h1{
     margin: 1rem;
 }
 .todo{
-    height: 100vh;
-    background-color: #E1D7C6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
 }
 
 .addtodo{
@@ -52,6 +54,7 @@ ul{
     flex-direction: column;
     align-items: center;
     height: fit-content;
+    background-color: #E1D7C6;
 }
 li{
     width: 700px;
