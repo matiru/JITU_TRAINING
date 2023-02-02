@@ -67,14 +67,14 @@ console.log(isPalindrome("Race car"));<br>
 
     // 3. Using a Prompt allow user to enter numbers separated by commas then print the sum of the numbers.<br>
 
-    let numbers = prompt("Enter numbers separated by commas");<br>
-    let sum = 0;<br>
-    let array = numbers.split(",");<br>
-    for (let i = 0; i < array.length; i++){<br>
-        sum += Number(array[i]);<br>
-    }<br>
-    console.log(sum);<br>
-    alert("The sum of the numbers is " + sum);<br>
+    let numbers = prompt("Enter numbers separated by commas");
+    let sum = 0;
+    let array = numbers.split(",");
+    //using reduce method to sum the numbers
+    sum = array.reduce((a, b) => parseInt(a) + parseInt(b));
+    console.log(sum);
+    alert(sum);
+    
 </p>
  <hr>
 

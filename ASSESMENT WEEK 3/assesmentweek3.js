@@ -46,11 +46,11 @@ console.log(isPalindrome("Race car"));
 let numbers = prompt("Enter numbers separated by commas");
 let sum = 0;
 let array = numbers.split(",");
-for (let i = 0; i < array.length; i++){
-    sum += Number(array[i]);
-}
+//using reduce method to sum the numbers
+sum = array.reduce((a, b) => parseInt(a) + parseInt(b));
 console.log(sum);
-alert("The sum of the numbers is " + sum);
+alert(sum);
+
 
 
 // 4. Create a function that, given a DOM Element on the page, will visit the element itself 
@@ -61,13 +61,13 @@ alert("The sum of the numbers is " + sum);
 
 // a DOM element
 
-// a callback function (that takes a DOM element as its argument)
+// a callback function (that takes a DOM element as its argument
 
 let p_element =document.querySelector('#parent');
 let p_callback = function(element){
     console.log(element);
 }
-console.log(p_element);
+
 
 function visitElement(element, callback){
     callback(element);
@@ -76,4 +76,3 @@ function visitElement(element, callback){
         visitElement(children[i], callback);
     }
 }
-visitElement(p_element, p_callback);
