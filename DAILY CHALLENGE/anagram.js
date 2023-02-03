@@ -3,21 +3,12 @@
 
 
 function isAnagram(str1, str2) {
+  str1 = str1.replace(/\s/g, '').toLowerCase().sort();
+  str2 = str2.replace(/\s/g, '').toLowerCase().sort();
+  return str1 === str2;
   
-    if(str1.length !== str2.length) {
-      return false;
-    }
     
-    let str3 = str1.split('').sort().join('').toLowerCase();
-    let str4 = str2.split('').sort().join('').toLowerCase();
-  
-    if (str3 === str4) {
-      return true;
-    } else {
-        return false;
-        
-        }
-       
+ 
 }
 
 console.log(isAnagram('listen', 'silent'));
