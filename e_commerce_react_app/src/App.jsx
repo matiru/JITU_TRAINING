@@ -12,14 +12,14 @@ const getProducts = async()=>{
   let products = await fetch ("https://fakestoreapi.com/products")
   .then(res=>res.json());
   return products;
-}
 
+}
 useEffect(() =>{
   ( function (){
-   getProducts().then(res=>getProducts(res))
+   getProducts().then(res=>setProducts(res))
 
 
-  } )()
+  } )() 
 
   console.log(products)
 

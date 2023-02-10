@@ -34,7 +34,7 @@ const [animals , setAnimals] = useState([
 
 ])
 
-const filteredAnimals = animals.filter(animal => animal.name.toLowerCase().startsWith(searchItem.toLowerCase()));
+const filteredAnimals = animals.filter(animal => animal.name.toLowerCase().includes(searchItem.toLowerCase()));
 
 
 const handleChange = (e) => {
