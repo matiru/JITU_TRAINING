@@ -5,8 +5,15 @@ import { TodosContext } from './todo_list';
 
 function  Todo() {
 
-    const todos = useContext(TodosContext);
-    // console.log(todos);
+    const[data, setData] = useContext(TodosContext);
+    const {todos} = data;
+
+    
+
+
+
+
+
 
 
   return (

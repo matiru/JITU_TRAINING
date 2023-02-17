@@ -5,12 +5,11 @@ import { TodosContext } from './todo_list';
 const CreateTodo =()=>{
 
 
-    const [data ,setData] = useContext(TodosContext);
-    const [todos, setTodos] = useState(data);
-    console.log("my todos",todos);
+    
+    const [data ,setData]= useContext(TodosContext);
+    const{todos} = data;
 
-    console.log("my todos",todos);
-    const[newTodo, setNewTodo] = useState({});
+
 
 
     const [title, setTitle] = useState('');
@@ -27,35 +26,56 @@ const CreateTodo =()=>{
           console.log(date_due);
           };
       
+          // handle submit and set new todo to  the local storage
+
+
+
       
           const handleSubmit = (e) => {
             e.preventDefault();
             console.log('submitted');
-            setNewTodo({
+
+            const newTodo = {
               id: todos.length + 1,
               title: title,
               date_due: date_due,
               completed: false,
-          });
-        //   setTodos([...todos, newTodo]);
           };
-        
+          
+          const TodoArray = [];
+
+          
+          
+          if(title.trim() === '' || date_due.trim() === ''){
+            setData({...data})
+            }else{
+                setData ({...data,todos:[...todos]}) 
+                TodoArray.push(newTodo);
+                console.log(TodoArray,"hhadaasda");
+                localStorage.setItem('todos', JSON.stringify(TodoArray));
+                setDate_due('');
+                setTitle('');
+            }
+          
+
+          };
       
+        
      
       
 
     return(
 
-        <TodosContext.Provider value={todos}>
+        // <TodosContext.Provider value={todos}>
         <form className="todo_form">
-        <input className='addtodo' type="text"placeholder="add to do"onChange={handleInputChange}></input>
+        <input className='addtodo' value={title} type="text" placeholder="add to do"onChange={handleInputChange} required></input>
         <small><label>Due date</label></small>
-        <input className='adddate' type="date" onChange={handleDateChange} ></input>
-        <button className='addtodoBtn'
+        <input className='adddate'  value ={date_due}type="date" onChange={handleDateChange} required ></input>
+        <button type='submit' className='addtodoBtn'
          onClick={handleSubmit}
          > add to do</button>
       </form>
-        </TodosContext.Provider>
+       // {/* </TodosContext.Provider> */}
 
     )
     
