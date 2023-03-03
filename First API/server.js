@@ -1,29 +1,12 @@
 const express = require("express");
-
+require("dotenv").config();
+const { config } = require("./sqlconfig");
 const app = express();
 
-const port = 3000;
+const sql = require("mssql");
+const port = process.env.PORT ||3050;
 
-const users = [
-  {
-    name: "Gem",
-    password: "4321",
-    profession: "web developer",
-    id: 1,
-  },
-  {
-    name: "matiru",
-    password: "124",
-    profession: "gym instructor",
-    id: 2,
-  },
-  {
-    name: "kagwa",
-    password: "1234",
-    profession: "football coach",
-    id: 3,
-  },
-];
+
 
 app.listen(port, () => {
   console.log(`Server is running on port : ${port}`);
@@ -35,8 +18,16 @@ app.get("/", (req, res) => {
   res.send("Hello World from the server side");
 });
 
-app.get("/users", (req, res) => {
+app.get("/users", async (req, res) => {
+  try { 
+    await sql.connect(config);
+    let users = sql.query`select * from users`;
   res.json(users);
+  }
+  catch (err) {
+    console.log(err);
+  }
+  
 });
 
 app.post("/users", (req, res) => {
@@ -101,4 +92,7 @@ app.get("/login", (req, res) => {
       res.send("Invalid name or password");
     }
   });
+  
+
+
   
